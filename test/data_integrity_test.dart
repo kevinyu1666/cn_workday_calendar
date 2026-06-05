@@ -84,8 +84,8 @@ void main() {
 
 /// 校验 JSON 节日列表与 Dart 内置节日列表一致。
 ///
-/// 这个测试服务于《牛马日志》的长期维护：未来新增年份时，JSON 是跨语言 SDK
-/// 的事实数据源，Dart 内置数据是运行期实现，两者一旦漂移就会造成平台间判断不一致。
+/// 这个测试服务于开源项目的长期维护：未来新增年份时，JSON 是跨语言 SDK 的
+/// 事实数据源，Dart 内置数据是运行期实现，两者一旦漂移就会造成平台间判断不一致。
 void _expectJsonEventsMatchBuiltInEvents({
   required Map<String, Object?> jsonSchedule,
   required HolidaySchedule builtInSchedule,

@@ -43,6 +43,26 @@ calendar.countWorkdays(
 );
 ```
 
+## CLI Smoke Test
+
+项目内置一个可执行命令，方便不用写代码也能验证 SDK 判断结果。
+
+```bash
+dart run cn_workday_calendar date 2026-02-14
+dart run cn_workday_calendar date 2026-02-16
+dart run cn_workday_calendar range 2026-02-01 2026-02-28
+dart run cn_workday_calendar samples
+```
+
+输出会包含：
+
+- 是否工作日
+- 是否周末
+- 是否法定节假日
+- 是否调休补班日
+- 关联节假日名称
+- 区间内总天数、工作日数、非工作日数
+
 ## Data Sources
 
 - 2024: [国务院办公厅关于2024年部分节假日安排的通知](https://www.kashi.gov.cn/ksdqxzgs/c115966/202310/c37344d547094e6e8ec8506dc07e7673.shtml)
@@ -58,6 +78,7 @@ calendar.countWorkdays(
 ```bash
 dart analyze
 dart test
+dart run cn_workday_calendar samples
 ```
 
 测试分两类：

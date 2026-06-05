@@ -6,6 +6,9 @@ repository: https://github.com/kevinyu1666/cn_workday_calendar
 environment:
   sdk: ^3.11.0
 
+executables:
+  cn_workday_calendar:
+
 dependencies:
 
 dev_dependencies:

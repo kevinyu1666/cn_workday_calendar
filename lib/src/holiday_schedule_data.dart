@@ -24,8 +24,8 @@ final class HolidaySchedule {
 
   /// 查找目标日期关联的节假日。
   ///
-  /// 《牛马日志》需要在详情页解释“这天为什么休息或补班”。使用节日事件反查，
-  /// 可以避免调用方只拿到布尔值后再手动拼接一套不可信的展示文案。
+  /// 调用方通常需要解释“这天为什么休息或补班”。使用节日事件反查，可以避免
+  /// 调用方只拿到布尔值后再手动拼接一套不可信的展示文案。
   HolidayEvent? findHolidayEvent(DateTime normalizedTargetDate) {
     for (final holidayEvent in events) {
       if (holidayEvent.containsDate(normalizedTargetDate)) {
