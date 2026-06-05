@@ -53,6 +53,18 @@ calendar.countWorkdays(
 
 每年国务院办公厅发布下一年度节假日安排后，维护者应新增对应年份数据，并补充测试。任何数据变更都必须包含来源 URL，避免项目变成无法审计的“手抄日历”。
 
+## Testing
+
+```bash
+dart analyze
+dart test
+```
+
+测试分两类：
+
+- API 行为测试：覆盖普通工作日、普通周末、法定节假日、调休补班、日期区间统计。
+- 数据完整性测试：校验 Dart 内置数据和 `data/holiday_schedules.json` 一致，防止多语言 SDK 后续复用 JSON 时出现平台间结果漂移。
+
 ## License
 
 MIT
