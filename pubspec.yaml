@@ -1,0 +1,13 @@
+name: cn_workday_calendar
+description: China mainland legal holiday, adjusted workday, and workday calendar for Dart.
+version: 0.1.0
+repository: https://github.com/kevinyu1666/cn_workday_calendar
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
